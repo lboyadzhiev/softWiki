@@ -7,6 +7,11 @@ import { editPage } from './views/edit.js';
 import { registerPage } from './views/register.js';
 import { loginPage } from './views/login.js';
 
+import * as api from './api/api.js';
+api.settings.host = 'https://parseapi.back4app.com';
+
+window.api = api;
+
 page('/', homePage);
 page('/dashboard', homePage);
 page('/create', createPage);
