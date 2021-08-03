@@ -27,8 +27,8 @@ function getOptions(method = 'get', body) {
     const options = {
         method,
         headers: {
-            'X-Parse-Application-Id': 'x0pY6V449o2CAHOMo55821hpnK8Eu2Iduv7mYUBb',
-            'X-Parse-REST-API-Key': 'Mp40JwKn4u895GEDGOe7f6ATzuweZbDT6d1ycvEu',
+            'X-Parse-Application-Id': 'gVyqDkNlZKrP2YTKM8sZHItGQ5PMHtPD1CFwH1GU',
+            'X-Parse-REST-API-Key': 'QF0fnSTZ6gGlaBK82Gs1jJkkXvMdz3ZehK6RAaLB',
         },
     };
 
@@ -74,7 +74,7 @@ export async function login(username, password) {
     const result = await post(settings.host + '/login', { username, password });
 
     sessionStorage.setItem('username', username);
-    sessionStorage.setItem('authToken', result.sessionStorage);
+    sessionStorage.setItem('authToken', result.sessionToken);
     sessionStorage.setItem('userId', result.objectId);
 
     return result;
